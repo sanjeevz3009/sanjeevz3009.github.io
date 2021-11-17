@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #252934;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "DM Mono", monospace;
+}
+
+.navigationBar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 5em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 10;
+  background: #252934;
+}
+.navigationBar h1 {
+  position: absolute;
+  left: 0;
+  margin: 3px 0px 0px 10px;
+  letter-spacing: 2px;
+}
+.navigationBar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navigationBar li a {
+  display: flex;
+  text-align: center;
+  padding: 3px 20px 5px 14px;
+  text-decoration: none;
+  font-family: "DM Mono", monospace;
+  font-size: 1.3em;
+  font-style: normal;
+  transition: background-color 0.5s ease;
+  color: rgba(255, 255, 255, 0.795);
+}
+.navigationBar a:hover {
+  color: white;
+}
+.navigationBar li ul {
+  display: none;
+  background-color: #333333;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 10em;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.landingAnimation {
+  height: 100vh;
+  width: 100vw;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+  padding: 3rem;
+  overflow-x: scroll;
+}
+
+.cardList::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.cardList::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 3px;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cardList::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 30em;
+  width: 70em;
+  padding: 2rem;
+  margin-bottom: 2em;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+  transform: translateY(50px);
+}
+
+/* .card:not(:first-child) {
+  margin-left: -100px;
+} */
+
+.cardAuthor {
+  position: relative;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  margin: 3rem 0 0;
+}
+
+.authorAvatar img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  overflow: hidden;
+  margin: 16px 10px;
+}
+
+.halfCircle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: limegreen;
+  stroke-width: 8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.authorNamePrefix {
+  font-style: normal;
+  font-weight: 700;
+  color: grey;
+}
+
+.cardHeader h2:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5em;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  font-size: 0.66em;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+}
+
+.tags a:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: white;
+}
