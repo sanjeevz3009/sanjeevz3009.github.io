@@ -21,7 +21,7 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  background: linear-gradient(360deg, #252934 0%, #00b8cc 40%, #016874 50%, #252934 80%);
+  background: linear-gradient(360deg, #252934 5%, #00b8cc 40%, #016874 50%, #252934 80%);
   
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -159,6 +159,10 @@ li:nth-child(3) a {
   height: 100vh;
   width: 100vw;
 }
+
+/* .intro {
+  display:
+} */
 
 .cardList {
   display: flex;
