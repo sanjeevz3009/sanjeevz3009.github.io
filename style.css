@@ -1,19 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
+/* html {
   background: #252934;
-}
+} */
 
 body {
   padding: 0;
   margin: 0;
   color: white;
   font-family: "DM Mono", monospace;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background: linear-gradient(360deg, #252934 0%, #00b8cc 40%, #016874 50%, #252934 80%);
+  
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite; */
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .navigationBar {
@@ -26,14 +50,19 @@ body {
   justify-content: center;
   padding: 1rem;
   z-index: 10;
-  background: #252934;
+  backdrop-filter: blur(10px);
 }
+
 .navigationBar h1 {
   position: absolute;
   left: 0;
   margin: 3px 0px 0px 10px;
   letter-spacing: 2px;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite; */
 }
+
 .navigationBar ul {
   display: flex;
   list-style: none;
@@ -41,31 +70,92 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
 .navigationBar li a {
+  /* display: block;
+  position: relative;
+  padding: 0.2em 0; */
   display: flex;
   text-align: center;
-  padding: 3px 20px 5px 14px;
+  position: relative;
+  padding: 3px 30px 5px 14px;
   text-decoration: none;
-  font-family: "DM Mono", monospace;
+  /* font-family: "DM Mono", monospace; */
   font-size: 1.3em;
-  font-style: normal;
-  transition: background-color 0.5s ease;
+  /* font-style: normal; */
+  /* transition: background-color 0.5s ease; */
   color: rgba(255, 255, 255, 0.795);
 }
-.navigationBar a:hover {
+
+.navigationBar li a:hover {
   color: white;
 }
-.navigationBar li ul {
-  display: none;
-  background-color: #333333;
-  visibility: hidden;
-  opacity: 0;
-  min-width: 10em;
+
+.navigationBar li a::after {
+  content: '';
   position: absolute;
-  transition: all 0.5s ease;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: hotpink;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
 }
 
-.landingAnimation {
+.navigationBar li a:hover::after,
+.navigationBar li a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+li:nth-child(2) a {
+	overflow: hidden;
+}
+
+.navigationBar li:nth-child(2) a::after {
+	opacity: 1;
+	transform: translate3d(-100%, 0, 0);
+}
+
+.navigationBar li:nth-child(2) a:hover::after,
+.navigationBar li:nth-child(2) a:focus::after{
+	transform: translate3d(0, 0, 0);
+}
+
+li:nth-child(3) a {
+	overflow: hidden;
+}
+
+.navigationBar li:nth-child(3) a::after {
+	opacity: 1;
+	transform: translate3d(100%, 0.12em, 0);
+}
+
+.navigationBar li:nth-child(3) a:hover::after,
+.navigationBar li:nth-child(3) a:focus::after{
+	transform: translate3d(0, 0, 0);
+}
+.navigationBar li:nth-child(4) a::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.navigationBar li:nth-child(4) a:hover::after,
+.navigationBar li:nth-child(4) a:focus::after{
+  transform: scale(1);
+}
+
+.navigationBar h1:hover{
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.landingPage {
   height: 100vh;
   width: 100vw;
 }
@@ -84,22 +174,23 @@ body {
   height: 10px;
 }
 
-.cardList::-webkit-scrollbar-thumb {
+/* .cardList::-webkit-scrollbar-thumb {
   background: #201c29;
   border-radius: 3px;
   box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
-}
+} */
 
-.cardList::-webkit-scrollbar-track {
+/* .cardList::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
-}
+} */
 
 .card {
   display: flex;
   position: relative;
   flex-direction: column;
+  align-items: center;
   height: 30em;
-  width: 70em;
+  width: 85em;
   padding: 2rem;
   margin-bottom: 2em;
   border-radius: 16px;
@@ -108,12 +199,29 @@ body {
   transition: 0.3s;
 }
 
+.contact {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactLinks a {
+  /* color: red; */
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.795);
+}
+
+.contactLinks a:hover {
+  color: white;
+}
+
 .card:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-10px);
 }
 
 .card:hover ~ .card {
-  transform: translateY(50px);
+  transform: translateY(5px);
 }
 
 /* .card:not(:first-child) {
