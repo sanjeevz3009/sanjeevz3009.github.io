@@ -15,20 +15,20 @@
     <nav class="navigationBar">
         <h1>SANJEEV SRITHEVAN</h1>
         <ul>
-            <li><a href="about.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Projects</a></li>
-            <li><a href="resume.html">Experience</a></li>
-            <li><a href="contactMe.html">Contact</a></li>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Projects</a></li>
+            <li><a href="#section4">Experience</a></li>
+            <li><a href="#section4">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="landingPage">
+    <section class="landingPage" id="section1">
         <div class="blob-content">
             <h1>Hi. I am Sanjeev.<br>A Fellow Software<br> Engineering Undergraduate Student and A Cat Lover.</h1><br>
             <p>
                 Apart from that I love web technologies and creating full-stack web applications.<br><br>
-                Any fun silly project to anything that can solve a real-world problem is enough to<br>
+                Any fun silly project to anything that can solve a real-world problem is enough to
                 force me out of bed every morning.<br><br>
                 Of course I do wake up for a coffee too but that's not the only reason I wake up for.
             </p>
@@ -76,8 +76,8 @@
 
     </section>
 
-    <section class="cardList">
-        <article class="card">
+    <section class="cardList" id="section11">
+        <article class="card" id="section2">
             <header class="cardHeader">
                 <!-- <p>May 25th 2020</p> -->
                 <h2>About</h2>
@@ -103,14 +103,14 @@
             </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="section3">
             <header class="cardHeader">
                 <!-- <p>May 25th 2020</p> -->
                 <h2>Projects</h2>
             </header>
         </article>
 
-        <article class="card">
+        <article class="card" id="section4">
             <header class="cardHeader">
                 <!-- <p>May 25th 2020</p> -->
                 <h2>Experience</h2>
@@ -137,4 +137,30 @@
             </div>
         </article>
     </section>
+
+    <div class="animation">
+        <svg width="150" height="500" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="triangles">
+              <g id="lightGroup">
+                <path
+                  id="light1"
+                  opacity="0.6"
+                  d="M53.4872 46.3509C55.7436 47.6536 55.7436 50.9105 53.4872 52.2132L13.718 75.174C11.4615 76.4767 8.64104 74.8483 8.64104 72.2428L8.64104 26.3213C8.64104 23.7158 11.4616 22.0874 13.718 23.3901L53.4872 46.3509Z"
+                />
+              </g>
+            <g id="darkGroup">
+                <path
+                  id="dark1"
+                  opacity="0.8"
+                  d="M74.9231 46.915C77.1795 48.2177 77.1795 51.4746 74.9231 52.7773L34.3077 76.2266C32.0513 77.5294 29.2308 75.9009 29.2308 73.2955L29.2308 26.3968C29.2308 23.7914 32.0513 22.1629 34.3077 23.4657L74.9231 46.915Z"
+                />
+                <path
+                  id="dark2"
+                  opacity="0.8"
+                  d="M54.6154 46.915C56.8718 48.2177 56.8718 51.4746 54.6154 52.7773L14 76.2266C11.7436 77.5294 8.92307 75.9009 8.92307 73.2955L8.92308 26.3968C8.92308 23.7914 11.7436 22.1629 14 23.4657L54.6154 46.915Z"
+                />
+              </g>
+            </g>
+        </svg>
+    </div>
 </body>
