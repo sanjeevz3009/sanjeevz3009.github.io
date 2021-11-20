@@ -293,7 +293,7 @@ li:nth-child(3) a {
   height: 30em;
   width: 90em;
   padding: 2rem;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   border-radius: 16px;
   background: #17141d;
   transition: 0.3s;
@@ -301,6 +301,11 @@ li:nth-child(3) a {
 }
 
 .projectsContent {
+  display: flex;
+  width: 85em;
+}
+
+.experienceContent {
   display: flex;
   width: 85em;
 }
