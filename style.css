@@ -291,13 +291,56 @@ li:nth-child(3) a {
   flex-direction: column;
   align-items: center;
   height: 30em;
-  width: 85em;
+  width: 90em;
   padding: 2rem;
   margin-bottom: 2em;
   border-radius: 16px;
   background: #17141d;
   transition: 0.3s;
   text-align: justify;
+}
+
+.projectsContent {
+  display: flex;
+  width: 85em;
+}
+
+.smallCard {
+  cursor: pointer;
+  margin-left: 1em;
+  /* display: flex; */
+  /* position: relative; */
+  flex-direction: row;
+  /* align-items: center; */
+  height: 20em;
+  width: 25em;
+  /* padding: 2rem; */
+  /* margin-bottom: 2em; */
+  border-radius: 10px;
+  background: #154651;
+  transition: 0.3s;
+  /* text-align: justify; */
+}
+
+.smallCard > h3 {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.smallCard > p {
+  margin-top: 0.8em;
+  margin-left: 2em;
+  /* text-align: justify; */
+  width: 15em;
+}
+
+.smallCard:hover {
+  transform: translateY(-10px);
+  box-shadow: -0.5rem 0 3rem #154651;
+}
+
+.smallCard:hover ~ .smallCard {
+  transform: translateY(10px);
 }
 
 .aboutContent {
@@ -396,20 +439,46 @@ li:nth-child(3) a {
   background-clip: text;
 }
 
-.tags a {
+.tags {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 20em;
+  top: 2em;
+}
+
+.tags p {
+  margin-left: 2em;
   font-style: normal;
   font-weight: 700;
   font-size: 0.5em;
-  color: #7a7a8c;
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 125%;
   text-transform: uppercase;
   font-size: 0.66em;
-  border: 3px solid #28242f;
-  border-radius: 2rem;
-  padding: 0.2rem 0.85rem 0.25rem;
+  /* border: 3px solid #28242f;
+  border-radius: 2rem; */
+  /* padding: 0.2rem 0.85rem 0.25rem; */
   position: relative;
 }
 
-.tags a:hover {
+.smallCard a {
+  display: flex;
+  position: relative;
+  top: 3em;
+  left: 1.3em;
+  /* color: red; */
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.795);
+}
+
+.smallCard a:hover {
+  color: white;
+}
+
+/* .tags a:hover {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
@@ -417,4 +486,4 @@ li:nth-child(3) a {
   -webkit-box-decoration-break: clone;
   background-clip: text;
   border-color: white;
-}
+} */
