@@ -300,6 +300,22 @@ li:nth-child(3) a {
   text-align: justify;
 }
 
+.experienceCard {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 50em;
+  width: 90em;
+  padding: 2rem;
+  margin-bottom: 3em;
+  border-radius: 16px;
+  background: #17141d;
+  transition: 0.3s;
+  text-align: justify;
+}
+
 .projectsContent {
   display: flex;
   width: 85em;
@@ -307,12 +323,14 @@ li:nth-child(3) a {
 
 .experienceContent {
   display: flex;
+  flex-wrap: wrap;
   width: 85em;
 }
 
 .smallCard {
   cursor: pointer;
   margin-left: 1em;
+  margin-bottom: 1em;
   /* display: flex; */
   /* position: relative; */
   flex-direction: row;
@@ -353,7 +371,7 @@ li:nth-child(3) a {
   position: absolute;
   text-align: justify;
   width: 40em;
-  left: 2em;
+  /* left: 2em; */
 }
 
 .aboutContent > h2 {
