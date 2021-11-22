@@ -301,7 +301,7 @@ svg:hover #dark2 {
   background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
 } */
 
-.aboutCard, .projectsCard, .experienceCard, .skillsCard {
+.aboutCard, .projectsCard, .experienceCard {
   cursor: pointer;
   display: flex;
   position: relative;
@@ -349,6 +349,180 @@ svg:hover #dark2 {
   transition: 0.3s;
   text-align: justify;
 } */
+
+.skillsCard {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 35em;
+  width: 90em;
+  padding: 2rem;
+  margin-bottom: 3em;
+  border-radius: 16px;
+  background: #17141d;
+  transition: 0.3s;
+  text-align: justify;
+}
+
+.languages {
+  position: absolute;
+  width: 10em;
+  left: 10em;
+}
+
+.languages h2 {
+  margin-left: 0.5em;
+}
+
+.languages li{
+  list-style: none;
+  background: rgba(255, 255, 255, 0.795);;
+  padding: 0.5em;
+  margin: 1em;
+  text-align: center;
+  /* margin-left: 2em; */
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 0.5em; */
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* line-height: 125%; */
+  text-transform: uppercase;
+  font-size: 1em;
+  /* line-height: 1.5em; */
+}
+
+.languages li:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  /* background-clip: text; */
+  /* border-color: white; */
+}
+
+.frameworks {
+  position: absolute;
+  width: 10em;
+  left: 40.5em;
+}
+
+.frameworks ul {
+  margin-right: 1.5em;
+}
+.frameworks li{
+  list-style: none;
+  background: rgba(255, 255, 255, 0.795);;
+  padding: 0.5em;
+  margin: 1em;
+  text-align: center;
+  /* margin-left: 2em; */
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 0.5em; */
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* line-height: 125%; */
+  text-transform: uppercase;
+  font-size: 1em;
+  /* line-height: 1.5em; */
+}
+
+.frameworks li:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  /* background-clip: text; */
+  /* border-color: white; */
+}
+
+.databases {
+  position: absolute;
+  width: 10em;
+  left: 70em;
+}
+
+.databases h2 {
+  margin-left: 0.6em;
+}
+
+.databases li{
+  list-style: none;
+  background: rgba(255, 255, 255, 0.795);;
+  padding: 0.5em;
+  margin: 1em;
+  text-align: center;
+  /* margin-left: 2em; */
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 0.5em; */
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* line-height: 125%; */
+  text-transform: uppercase;
+  font-size: 1em;
+  /* line-height: 1.5em; */
+}
+
+.databases li:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  /* background-clip: text; */
+  /* border-color: white; */
+}
+
+
+.projectsContent {
+  display: flex;
+  width: 85em;
+}
+
+.cardHeader h2 {
+  font-style: normal;
+  font-weight: 700;
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 125%;
+  text-transform: uppercase;
+  /* border: 3px solid #28242f;
+  border-radius: 2rem; */
+  /* padding: 0.2rem 0.85rem 0.25rem; */
+  /* position: relative; */
+}
+
+.skillsCardHeader h2 {
+  font-style: normal;
+  font-weight: 700;
+  background: linear-gradient(271deg,#ff8a00 30%,#e52e71 50%,#ff8a00 70%,#e52e71 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 125%;
+  text-transform: uppercase;
+  /* border: 3px solid #28242f;
+  border-radius: 2rem; */
+  /* padding: 0.2rem 0.85rem 0.25rem; */
+  /* position: relative; */
+}
+
+.skillsCardHeader h2:hover {
+  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 .cardHeader h2:hover {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
@@ -399,11 +573,6 @@ svg:hover #dark2 {
   color: grey;
 } */
 
-.projectsContent {
-  display: flex;
-  width: 85em;
-}
-
 .aboutCard:hover {
   transform: translateY(-10px);
   box-shadow: -1rem 0 3rem #000;
@@ -422,18 +591,23 @@ svg:hover #dark2 {
   transform: translateY(5px);
 }
 
-.card:hover ~ .experienceCard {
-  transform: translateY(5px);
-}
-
 .experienceCard:hover {
   transform: translateY(-10px);
   box-shadow: -1rem 0 3rem #000;
 }
 
-.experienceCard:hover ~ .card {
+.experienceCard:hover ~ .skillsCard {
   transform: translateY(5px);
 }
+
+.skillsCard:hover {
+  transform: translateY(-10px);
+  box-shadow: -1rem 0 3rem #000;
+}
+
+/* .skillsCard:hover ~ .card {
+  transform: translateY(5px);
+} */
 
 .experienceContent {
   display: flex;
