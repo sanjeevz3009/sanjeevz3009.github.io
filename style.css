@@ -185,9 +185,9 @@ li:nth-child(3) a {
   margin-top: 10vh;
 }
 
-svg {
+/* svg {
   cursor: pointer;
-}
+} */
 
 #darkGroup {
   fill: var(--dark-color);
@@ -275,6 +275,10 @@ svg:hover #dark2 {
 .aboutContent h2 {
   text-align: center;
   margin-bottom: 0.2em;
+}
+
+.aboutContent p {
+  height: 0;
 }
 
 .cardList {
